@@ -9,7 +9,7 @@ const Home = () => (
     </h1>
     <p className="desc text-center">
       Fuel Your Creativity, Inspire the World: Unleash Your Ideas with Our
-      AI-Powered Blogging Platform!
+      Blogging Platform!
     </p>
 
     <Feed />
