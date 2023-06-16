@@ -30,7 +30,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           console.log("Download URL:", downloadURL);
           setPost((prevPost) => ({ ...prevPost, image: downloadURL }));
           setOpen(false);
-          console.log(post);
+          //console.log(post);
           setOpen(false);
         }
       );
@@ -44,8 +44,8 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <span className="blue_gradient">{type} Post</span>
       </h1>
       <p className="desc text-left max-w-md">
-        {type} and share amazing prompts with the world, and let your
-        imagination run wild with any AI-powered platform
+        {type} Unveil extraordinary in the minuscule. Capture magic in fleeting
+        encounters, whispers of delicate moments, enchantment in tiny corners.
       </p>
 
       <form
@@ -54,7 +54,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
       >
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            Your AI Prompt
+            Your Blog
           </span>
 
           <textarea
@@ -67,7 +67,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         </label>
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            Your Image
+            Blog Image
           </span>
 
           <input
@@ -85,7 +85,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
 
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            Field of Prompt{" "}
+            Field of Blog{" "}
             <span className="font-normal">
               (#product, #webdevelopment, #idea, etc.)
             </span>

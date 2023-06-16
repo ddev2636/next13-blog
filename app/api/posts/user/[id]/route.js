@@ -1,4 +1,5 @@
 import Prompt from "@models/prompt";
+import User from "@models/user";
 import { connectToDB } from "@utils/database";
 
 export const GET = async (request, { params }) => {
@@ -6,10 +7,12 @@ export const GET = async (request, { params }) => {
     await connectToDB();
 
     const prompt = await Prompt.findById(params.id).populate("creator");
+    const { creator } = prompt;
+    const made = await User.findById(creator);
 
-    if (!prompt) return new Response("Prompt Not Found", { status: 404 });
+    if (!made) return new Response("Creator Not Found", { status: 404 });
 
-    return new Response(JSON.stringify(prompt), { status: 200 });
+    return new Response(JSON.stringify(made), { status: 200 });
   } catch (error) {
     return new Response("Internal Server Error", { status: 500 });
   }

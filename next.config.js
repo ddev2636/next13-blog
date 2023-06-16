@@ -4,8 +4,20 @@ const nextConfig = {
     appDir: true,
     serverComponentsExternalPackages: ["mongoose"],
   },
+  // images: {
+  //   domains: [
+  //     "lh3.googleusercontent.com",
+  //     "firebasestorage.googleapis.com",
+  //     "cdn-icons-png.flaticon.com",
+  //   ],
+  // },
   images: {
-    domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
   webpack(config) {
     config.experiments = {

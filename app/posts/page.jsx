@@ -8,19 +8,26 @@ const SingleBlogPost = () => {
   const searchParams = useSearchParams();
   const promptId = searchParams.get("id");
 
-  const [post, setPost] = useState({ id: "", prompt: "", tag: "", image: "" });
+  const [post, setPost] = useState({
+    id: "",
+    prompt: "",
+    tag: "",
+    image: "",
+    create: "",
+  });
 
   useEffect(() => {
     const getPromptDetails = async () => {
       const response = await fetch(`/api/posts/${promptId.toString()}`);
       const data = await response.json();
-      //console.log(data);
+      // console.log(data);
 
       setPost({
         prompt: data.prompt,
         tag: data.tag,
         image: data.image,
         id: data._id,
+        create: data.creator._id,
       });
     };
 

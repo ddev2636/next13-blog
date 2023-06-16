@@ -57,7 +57,7 @@ const PromptCard = ({
 
         <div className="copy_btn" onClick={handleClick}>
           <Image
-            src={"/assets/icons/copy.svg"}
+            src={"https://cdn-icons-png.flaticon.com/512/25/25637.png"}
             alt={"copy_icon"}
             width={12}
             height={12}
@@ -87,7 +87,9 @@ const PromptCard = ({
         </div>
       </div>
 
-      <p className="my-4 font-satoshi text-sm text-gray-700">{post.prompt}</p>
+      <p className="my-4 font-satoshi text-sm text-gray-700">
+        {post.prompt.substring(0, 100) + "..."}
+      </p>
       <p
         className="font-inter text-sm blue_gradient cursor-pointer"
         onClick={() => handleTagClick && handleTagClick(post.tag)}
