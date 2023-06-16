@@ -88,7 +88,9 @@ const Card = ({ post }) => {
           <div className="flex justify-end items-center ">
             <span className="m-2" onClick={handleDelete}>
               <Image
-                src={"/../public/assets/icons/delete.png"}
+                src={
+                  "https://res.cloudinary.com/dmgwdcvwd/image/upload/v1686906422/delete_idcn8s.png"
+                }
                 alt="user_image"
                 width={25}
                 height={25}
@@ -97,7 +99,9 @@ const Card = ({ post }) => {
             </span>
             <span className="m-2" onClick={() => handleEdit(post)}>
               <Image
-                src={"/../public/assets/icons/edit.png"}
+                src={
+                  "https://res.cloudinary.com/dmgwdcvwd/image/upload/v1686906499/edit_aaa3ru.png"
+                }
                 alt="edit"
                 width={25}
                 height={25}
