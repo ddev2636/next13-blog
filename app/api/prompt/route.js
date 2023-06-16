@@ -4,6 +4,7 @@ import { connectToDB } from "@utils/database";
 export const GET = async (request) => {
   try {
     await connectToDB();
+    console.log("getting");
 
     const prompts = await Prompt.find({}).populate("creator");
 

@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
+import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   //console.log(data);
@@ -35,9 +37,11 @@ const Feed = () => {
     setAllPosts(data);
   };
 
+  const pathname = usePathname();
+
   useEffect(() => {
     fetchPosts();
-  }, []);
+  }, [pathname]);
 
   const filterPrompts = (searchtext) => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
